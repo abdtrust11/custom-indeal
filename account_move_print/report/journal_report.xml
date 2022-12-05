@@ -160,6 +160,39 @@
                         </tfooter>
                     </table>
                 </div>
+                <table style="border:1pt solid grey;width:100%;color:black; margin-top:100pt;">
+						
+						<tr>
+							<!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Signature:</td> -->
+							<!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey;padding:3pt;">:توقيع</td> -->
+							<td width="16%" class="text-left arabic" style="padding-left:5pt;">Prepared‬‬ ‫‪By / من إعداد : </td> 
+                            
+  
+  
+							<td width="16%" class="text-left"><span t-field="o.user_id.name"/></td>
+                            <td width="16%" class="text-left arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</td>
+							<td width="16%" class="text-left"><span t-field="o.approved_jv.name"/></td>
+
+							<td width="16%" class="text-left arabic" style="padding-left:5pt;">Reviewed ‫‪By /راجعه:</td>
+							<td width="16%" class="text-left"><span t-field="o.reviwed_jv.name"/></td>
+
+
+						</tr>
+						
+						<!-- <tr> -->
+							<!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Client Stamp:<br/></td> -->
+							<!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey; padding:3pt;">:ختم العميل</td> -->
+							<!-- <td width="20%" class="text-center arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</td> -->
+							<!-- <td width="20%" class="text-left"><span t-field="doc.user_id.name"/></td> -->
+						<!-- </tr> -->
+                        
+						<!-- <tr> -->
+							<!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Client Stamp:<br/></td> -->
+							<!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey; padding:3pt;">:ختم العميل</td> -->
+							<!-- <td width="20%" class="text-right arabic" style="padding-left:5pt;"> Reviewed ‫‪By /راجعه:</td> -->
+							<!-- <td width="20%" class="text-left"><span t-field="doc.user_id.name"/></td> -->
+						<!-- </tr> -->
+					</table>
             </div>
         </t>
     </template>
