@@ -11,8 +11,8 @@ class AccountMove(models.Model):
     payment_method_indeal = fields.Many2one(
         comodel_name="payment.method",
         string="Payment Method",
-        # store=True,
-        # copy=True,
+        store=True,
+        copy=True,
     )
     logistic_inv_indeal = fields.Boolean(string="Logistic Invoice",default=False)
     invoice_date_indeal = fields.Date(string='Invoice Date')

@@ -56,11 +56,11 @@
                                 >Amount in Currency</th>
                                 <th name="th_debit" class="text-left">Debit</th>
                                 <th name="th_credit" class="text-left">Credit</th>
-                                <!-- <th
+                                <th
                                     name="th_tax_id"
                                     class="text-left"
                                 >Originator Tax</th>
-                                <th name="th_tax_ids" class="text-left">Taxes</th> -->
+                                <th name="th_tax_ids" class="text-left">Taxes</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -112,7 +112,7 @@
                                             t-options='{"widget": "monetary", "display_currency": line.company_currency_id}'
                                         />
                                     </td>
-                                    <!-- <td name='tb_originator_tax'>
+                                    <td name='tb_originator_tax'>
                                         <span
                                             class="text-nowrap"
                                             t-esc="line.tax_line_id.name"
@@ -125,7 +125,7 @@
                                             t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_ids))"
                                             id="line_tax_ids"
                                         />
-                                    </td> -->
+                                    </td>
                                 </tr>
                             </t>
                         </tbody>
@@ -160,63 +160,39 @@
                         </tfooter>
                     </table>
                 </div>
-                <div style="position:absolute;top:850px; page-break-inside: avoid;">
+                <table style="border:1pt solid grey;width:100%;color:black; margin-top:100pt;">
+						
+						<tr>
+							<!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Signature:</td> -->
+							<!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey;padding:3pt;">:توقيع</td> -->
+							<td width="16%" class="text-left arabic" style="padding-left:5pt;">Prepared‬‬ ‫‪By / من إعداد : </td> 
+                            
+  
+  
+							<td width="16%" class="text-left"><span t-field="o.user_id.name"/></td>
+                            <td width="16%" class="text-left arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</td>
+							<td width="16%" class="text-left"><span t-field="o.approved_jv.name"/></td>
 
-                    <table>
- <!-- style="border:1pt solid grey;width:100%;color:black;margin-top:150pt" -->
-                    <!-- margin-to:50pt; -->
+							<td width="16%" class="text-left arabic" style="padding-left:5pt;">Reviewed ‫‪By /راجعه:</td>
+							<td width="16%" class="text-left"><span t-field="o.reviwed_jv.name"/></td>
+
+
+						</tr>
+						
+						<!-- <tr> -->
+							<!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Client Stamp:<br/></td> -->
+							<!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey; padding:3pt;">:ختم العميل</td> -->
+							<!-- <td width="20%" class="text-center arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</td> -->
+							<!-- <td width="20%" class="text-left"><span t-field="doc.user_id.name"/></td> -->
+						<!-- </tr> -->
                         
-                        <!-- <th name="th_debit" class="text-left">Debit</th> -->
-                        <thead>
-                            <th width="16%" class="text-left arabic" style="padding-left:5pt;">Prepared‬‬ ‫‪By / من إعداد : </th> 
-                            <th width="16%" class="text-left arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</th>
-                            <th width="16%" class="text-left arabic" style="padding-left:5pt;">Reviewed ‫‪By /راجعه:</th>
-
-
-
-
-                        </thead>
-                        <tbody>
-                            <!-- <td> -->
-                                <!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Signature:</td> -->
-                                <!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey;padding:3pt;">:توقيع</td> -->
-                                <!-- <th width="16%" class="text-left arabic" style="padding-left:5pt;">Prepared‬‬ ‫‪By / من إعداد : </th> 
-                                
-                            </td> -->
-                            <t>
-                                <td width="16%" class="text-left"><span t-field="o.user_id.name" widget="signature"/></td>
-                            </t>
-                            <!-- <tr>
-                                <th width="16%" class="text-left arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</th>
-                            </tr> -->
-                            <t>
-                                <td width="16%" class="text-left"><span t-field="o.approved_jv.name" widget="signature" /></td>
-                            </t>
-                            <!-- <tr>
-                                <th width="16%" class="text-left arabic" style="padding-left:5pt;">Reviewed ‫‪By /راجعه:</th>
-                            </tr> -->
-                            <t>
-                                <td width="16%" class="text-left"><span t-field="o.reviwed_jv.name" widget="signature"/></td>
-
-
-                            </t>
-                            
-                            <!-- <tr> -->
-                                <!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Client Stamp:<br/></td> -->
-                                <!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey; padding:3pt;">:ختم العميل</td> -->
-                                <!-- <td width="20%" class="text-center arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</td> -->
-                                <!-- <td width="20%" class="text-left"><span t-field="doc.user_id.name"/></td> -->
-                            <!-- </tr> -->
-                            
-                            <!-- <tr> -->
-                                <!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Client Stamp:<br/></td> -->
-                                <!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey; padding:3pt;">:ختم العميل</td> -->
-                                <!-- <td width="20%" class="text-right arabic" style="padding-left:5pt;"> Reviewed ‫‪By /راجعه:</td> -->
-                                <!-- <td width="20%" class="text-left"><span t-field="doc.user_id.name"/></td> -->
-                            <!-- </tr> -->
-                        </tbody>
-                    </table>
-                </div>
+						<!-- <tr> -->
+							<!-- <td width="20%" class="text-left" style="border-bottom:1pt solid grey;">Client Stamp:<br/></td> -->
+							<!-- <td width="20%" class="text-right arabic" style="border-right:1pt solid grey;text-align:right;border-bottom:1pt solid grey; padding:3pt;">:ختم العميل</td> -->
+							<!-- <td width="20%" class="text-right arabic" style="padding-left:5pt;"> Reviewed ‫‪By /راجعه:</td> -->
+							<!-- <td width="20%" class="text-left"><span t-field="doc.user_id.name"/></td> -->
+						<!-- </tr> -->
+					</table>
             </div>
         </t>
     </template>
@@ -242,32 +218,3 @@
         <field name="binding_view_types">list,form</field>
     </record>
 </odoo>
-
-
-
-<!-- =================== -->
-  <!-- <t>
-                                <td width="10%" class="text-left"><img t-att-src="'data:image/png;base64,%s' % to_text(o.user_id.sign_initials)"/></td>
-                            </t> -->
-                            <!-- <t>
-
-                                <img t-att-src="'data:image/png;base64,%s' % to_text(o.user_id.sign_initials)"/>
-                            </t> -->
-                            <!-- <tr>
-                                <th width="16%" class="text-left arabic" style="padding-left:5pt;">Approved ‫‪By /وافق عليها :</th>
-                            </tr> -->
-                            <!-- <t>
-                                <td width="10%" class="text-left"><img t-att-src="'data:image/png;base64,%s' % to_text(o.user_id.sign_initials)"/></td>
-                            </t> -->
-                            <!-- <tr>
-                                <th width="16%" class="text-left arabic" style="padding-left:5pt;">Reviewed ‫‪By /راجعه:</th>
-                            </tr> -->
-                            <!-- <t>
-                                <td width="10%" class="text-left"><img t-att-src="'data:image/png;base64,%s' % to_text(o.user_id.sign_initials)"/></td>
-
-
-                            </t>
-                             -->
-
-
-<!-- ===================================== -->
